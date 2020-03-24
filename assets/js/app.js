@@ -561,6 +561,18 @@ function createModels(){
       console.error(error);
    } );
 
+   // BUSH
+   model = new THREE.GLTFLoader();
+   model.load("assets/models/modelBush/bush.gltf", function(gltf){
+      gltf.scene.position.set(-10, -8, -3);
+      gltf.scene.scale.set(0.75, 0.75, 0.75);
+      scene.add(gltf.scene);
+      modelBush = gltf.scene;
+      console.log('added');
+   }, undefined, function (error) {
+      console.error(error);
+   } );
+
    // BUSH LEFT
    model = new THREE.GLTFLoader();
    model.load("assets/models/modelBush/bush.gltf", function(gltf){
